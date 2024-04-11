@@ -17,14 +17,16 @@ https://raw.githubusercontent.com/catchorg/Catch2/v2.x/single_include/catch2/cat
 
 https://github.com/catchorg/Catch2/blob/v2.x/docs/tutorial.md#getting-catch2
 
+TEST OUTPUT 
 
-
+```
 /Users/seanwayland/CLionProjects/untitled/cmake-build-debug/untitled
 ===============================================================================
 All tests passed (4 assertions in 1 test case)
 
 
 Process finished with exit code 0
+```
 
 
 
