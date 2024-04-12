@@ -81,6 +81,31 @@ public:
         }
         return str;
     }
+
+    int checkList() {
+        int checkSum = 0;
+        Node *current = this->head;
+
+        while (current->next != nullptr) {
+            checkSum += current->data;
+            current = current->next;
+        }
+
+        checkSum += current->data;
+
+        while (current->prev != nullptr) {
+            checkSum -= current->data;
+            current = current->prev;
+
+        }
+
+        checkSum -= current->data;
+
+
+        return checkSum;
+    }
+
+
 };
 
 // Unit tests for DoublyLinkedList class
@@ -106,5 +131,24 @@ TEST_CASE("DoublyLinkedList tests", "[DoublyLinkedList]") {
 
         list.remove(15);
         REQUIRE(list.returnListString() == "");
+    }
+
+
+    SECTION("Test check function") {
+        DoublyLinkedList list2;
+        list2.add(1);
+        list2.add(2);
+        list2.add(3);
+        list2.add(4);
+        REQUIRE(list2.checkList() == 0);
+    }
+
+    SECTION("Test check function") {
+        DoublyLinkedList list3;
+        list3.add(1);
+        list3.add(15);
+        list3.add(17);
+        list3.add(4);
+        REQUIRE(list3.checkList() == 0);
     }
 }
