@@ -19,7 +19,7 @@ public:
 };
 
 //linked list that is  a doubly linked list, allowing movement forward and backward
-// no destructor or garbage collection provided use at your own risk !
+// use at your own risk !
 class DoublyLinkedList {
 public:
     Node *head;
